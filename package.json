@@ -1,0 +1,40 @@
+{
+  "name": "piyamaskolla.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "init": "docsify init .",
+    "serve": "docsify serve --livereload-port 8081 --port 8080 .",
+    "lint": "eslint js/shelo.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dir-rm": "rimraf css",
+    "dir-mk": "mkdir css",
+    "css": "stylus src/css/website.styl -u autoprefixer-stylus -o css",
+    "css-min": "node build/css-min.js",
+    "watch-css": "run-p 'css -- -w'",
+    "build-css": "run-s dir-rm dir-mk css css-min"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/piyamaskolla/piyamaskolla.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/piyamaskolla/piyamaskolla.github.io/issues"
+  },
+  "homepage": "https://github.com/piyamaskolla/piyamaskolla.github.io#readme",
+  "devDependencies": {
+    "autoprefixer-stylus": "^0.14.0",
+    "cssnano": "^4.1.7",
+    "docsify-cli": "^4.3.0",
+    "eslint": "^5.9.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "npm-run-all": "^4.1.3",
+    "rimraf": "^2.6.2",
+    "stylus": "^0.54.5"
+  }
+}
