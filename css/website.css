@@ -621,6 +621,7 @@ body {
   background-color: #dee;
   font-family: 'Life Savers', cursive;
   font-weight: 700;
+  font-size: 21px;
 }
 /* sidebar */
 .sidebar {
@@ -628,12 +629,12 @@ body {
   color: #364149;
 }
 .sidebar li {
-  margin: 6px 0 6px 0;
+  margin: 0px 0 0px 0;
 }
 .sidebar ul li a {
   color: #505d6b;
-  font-size: 16px;
-  font-weight: 400;
+  font-size: 14px;
+  font-weight: 700;
   overflow: hidden;
   text-decoration: none;
   text-overflow: ellipsis;
