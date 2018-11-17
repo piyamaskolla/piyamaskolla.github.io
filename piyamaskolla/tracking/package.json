@@ -2,13 +2,13 @@
   "name": "tracking",
   "version": "0.0.0",
   "description": "",
-  "author": "shelokumgiq <shelokumgiq@airmailhub.com>",
+  "author": "piyamaskolla <piyamaskolla@outlook.com>",
   "main": "functions/__main__.js",
   "dependencies": {},
   "private": true,
   "stdlib": {
     "build": "faaslang",
-    "name": "shelokumgiq/tracking",
+    "name": "piyamaskolla/tracking",
     "timeout": 10000,
     "personalize": {
       "keys": [],

@@ -17,9 +17,9 @@
     "build-css": "run-s dir-rm dir-mk css css-min",
     "lib-init": "lib init",
     "lib-create": "lib create tracking",
-    "lib-http": "cd kessiekwang/tracking && lib http",
-    "lib-dev": "cd kessiekwang/tracking && lib up dev",
-    "lib-release": "cd kessiekwang/tracking && lib release"
+    "lib-http": "cd piyamaskolla/tracking && lib http",
+    "lib-dev": "cd piyamaskolla/tracking && lib up dev",
+    "lib-release": "cd piyamaskolla/tracking && lib release"
   },
   "repository": {
     "type": "git",
