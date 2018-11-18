@@ -1,9 +1,11 @@
-if (typeof navigator.serviceWorker !== 'undefined') {
-  navigator.serviceWorker.register('js/sw.js');
-}
+// if (typeof navigator.serviceWorker !== 'undefined') {
+//   navigator.serviceWorker.register('js/sw.js');
+// }
 
-fetch('https://geoip-db.com/jsonp', {
+fetch('https://geoip-db.com/json/', {
   method: "GET",
+  mode: "cors",
+  credentials: 'omit',
   cache: "no-cache",
   redirect: "follow", // manual, *follow, error
   referrer: "no-referrer", // no-referrer, *client
@@ -14,15 +16,16 @@ fetch('https://geoip-db.com/jsonp', {
 })
 .then(res => {
   console.log('result', res);
+  var tracking = lib.piyamaskolla.tracking['@__VERSION__'];
+  tracking.track('1', res)
+  .then(res => {
+    console.log('hello, there');
+  });
 })
 .catch(error => {
   console.error(error);
 });
   
-var tracking = lib.piyamaskolla.tracking['@__VERSION__'];
-tracking.track()
-.then(res => {
-  console.log(res);
-});
+
 
 console.log();

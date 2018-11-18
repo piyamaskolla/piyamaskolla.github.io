@@ -6,14 +6,16 @@ let db_uri = process.env.DB_URI;
 
 /**
 * A tracking function
+* @param {string} cid Client ID
+* @param {object} loc Location object
 * @returns {number}
 */
-module.exports = (context, callback) => {
+module.exports = (cid = '', loc, context, callback) => {
   // // Make sure to add this so you can re-use `conn` between function calls.
   // // See https://www.mongodb.com/blog/post/serverless-development-with-nodejs-aws-lambda-mongodb-atlas
   // context.callbackWaitsForEmptyEventLoop = false;
   
-  run(context)
+  run(cid, loc, context)
   .then(res => {
     callback(null, res);
     console.log('track called!');
@@ -21,7 +23,7 @@ module.exports = (context, callback) => {
   .catch(error => callback(error));
 };
 
-function run(context) {
+function run(cid, loc, context) {
   return co(function*() {
     // Because `conn` is in the global scope, Lambda may retain it between
     // function calls thanks to `callbackWaitsForEmptyEventLoop`.
@@ -42,7 +44,15 @@ function run(context) {
       const trackSchema = new mongoose.Schema({
           user_id:  {type: Number, required: true},
           user_agent: {type: String, required: true},
-          ip_address: {type: String, required: true}
+          ip_address: {type: String, required: true},
+          country_code: {type: String, required: false},
+          country_name: {type: String, required: false},
+          city: {type: String, required: false},
+          postal: {type: String, required: false},
+          latitude: {type: String, required: false},
+          longitude: {type: String, required: false}, 
+          IPv4: {type: String, required: false},
+          state: {type: String, required: false}
         },
         { timestamps: true }
       );
@@ -51,9 +61,17 @@ function run(context) {
     
     const TrackLog = conn.model('TrackLog');
     let v = new TrackLog({
-      user_id:  '1',
+      user_id: cid,
       user_agent: context.http.headers["user-agent"],
-      ip_address: context.remoteAddress
+      ip_address: context.remoteAddress,
+      country_code: loc.country_code,
+      country_name: loc.country_name,
+      city: loc.city,
+      postal: loc.postal,
+      latitude: loc.latitude.toString(),
+      longitude: loc.longitude.toString(), 
+      IPv4: loc.IPv4,
+      state: loc.state
     });
     yield v.save();
 
