@@ -15,7 +15,6 @@ fetch('https://geoip-db.com/json/', {
   throw new Error('Network response was not ok.');
 })
 .then(res => {
-  console.log('result', res);
   var tracking = lib.piyamaskolla.tracking['@__VERSION__'];
   tracking.track('1', res)
   .then(res => {
