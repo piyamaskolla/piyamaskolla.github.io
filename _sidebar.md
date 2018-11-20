@@ -1,4 +1,4 @@
-* [Playing with CSS](css.md)
 * [Projects](projects.md)
+* [Dev Notes](devnotes.md)
 * [Games](games.md)
-* [About me](/)
+* [About Me](/)

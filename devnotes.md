@@ -1,8 +1,10 @@
-# Playing with CSS
+# Dev Notes
+
+## Playing with CSS
 
 This is my note about css for developing web site
 
-## border-radius
+### border-radius
 
 * Use 'border-radius: 50%' to crop image as circle
 
@@ -40,7 +42,7 @@ border-radius:10px/30px;
 border-radius:30px/10px;
 ```
 
-## hr tag styling
+### hr tag styling
 
 https://freefrontend.com/html-hr-css/
 
