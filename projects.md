@@ -4,10 +4,4 @@
 
 ## This web site
 
-Based on [docsify](https://docsify.js.org)
-
-![World of Tank Blitz](/img/projects/docsify.png "World of Tank Blitz")
-
-```
-  console.log('Hello, World');
-```
+I create this website by using [docsify](https://docsify.js.org) and deploy as static pages on [GitHub Pages](https://pages.github.com/).

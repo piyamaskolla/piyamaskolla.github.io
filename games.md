@@ -12,8 +12,5 @@
 
 [Link](https://secondlife.com/)
 
-[My secondlife profile](https://my.secondlife.com/shelokumgiq)
+[My secondlife profile](https://my.secondlife.com/piyamaskolla)
 
-![Second Life](/img/games/CreatorImage_Architecture_Final.jpg "Second Life")
-
-![Second Life](/img/games/CreatorResources_Forums_460x230.jpg "Second Life")
