@@ -25,7 +25,8 @@
     "lib-http": "cd piyamaskolla/tracking && lib http",
     "lib-dev": "cd piyamaskolla/tracking && lib up dev",
     "lib-release": "cd piyamaskolla/tracking && lib release",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test1": "docsify serve --help"
   },
   "repository": {
     "type": "git",

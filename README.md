@@ -1,6 +1,10 @@
 # Piyamas Kolla
 
-## WIP
+Greeting and welcome to my personal website
 
-work in progress
+## Education
+
+* B.Sc. (Information and Communication Technology)
+
+  [Sukhothai Thammathirat Open University](http://www.stou.ac.th/main/en/)
 
